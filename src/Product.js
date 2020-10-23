@@ -33,7 +33,7 @@ const Product = ({ id, title, price, rating, image }) => {
                             .fill()
                             .map((_) =>
                                 (
-                                    <p key={Math.random() + Math.random()}>*</p>
+                                    <p key={Math.random() + Math.random()}>🌟</p>
                                 )
                             )
                     }
