@@ -1,7 +1,15 @@
 export const initialState = {
-    basket: [],
+    basket: [{
+        id: "asadfdv",
+        title: "Samsung LC4 Fitness Band",
+        price: 1800,
+        rating: 4,
+        image: "https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+    }],
     user: null
 }
+export const getBasketTotal = (basket) =>
+    basket?.reduce((amount, item) => item.price + amount, 0)
 
 //reducer
 function reducer(state, action) {
