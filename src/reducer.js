@@ -1,11 +1,5 @@
 export const initialState = {
-    basket: [{
-        id: "asadfdv",
-        title: "Samsung LC4 Fitness Band",
-        price: 1800,
-        rating: 4,
-        image: "https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
-    }],
+    basket: [],
     user: null
 }
 export const getBasketTotal = (basket) =>
@@ -15,6 +9,12 @@ export const getBasketTotal = (basket) =>
 function reducer(state, action) {
     console.log(action);
     switch (action.type) {
+        case 'SET_USER':
+            return {
+                ...state,
+                user: action.user
+            }
+            break
         case 'ADD_TO_BASKET':
             return {
                 ...state,
